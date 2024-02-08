@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2022 The LineageOS Project
+// Copyright (C) 2023-2024 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,23 +14,9 @@
 // limitations under the License.
 
 cc_library_shared {
-    name: "libshim_audioparams",
-    srcs: ["audioparams.cpp"],
-    shared_libs: [
-        "libbase",
-        "libcutils",
-    ],
-    vendor: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libssl-v33",
-    target: {
-        android_arm64: {
-            srcs: ["libssl-v33.so"],
-        },
-    },
+    name: "libshim_crypto",
+    srcs: ["crypto.c"],
     compile_multilib: "64",
-    check_elf_files: false,
+    shared_libs: ["libcrypto-v33"],
     vendor: true,
 }

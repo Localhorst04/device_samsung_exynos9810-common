@@ -66,6 +66,11 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
                 "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
                 ;;
+        vendor/lib*/libskeymaster4device.so)
+                "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v33.so "${2}"
+                "${PATCHELF}" --add-needed libssl-v33.so "${2}"
+                "${PATCHELF}" --add-needed libshim_crypto.so "${2}"
+                ;;
         vendor/lib*/sensors.*.so)
                 "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
                 ;;

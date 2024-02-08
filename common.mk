@@ -137,6 +137,11 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service \
     android.hardware.keymaster@3.0-impl
 
+PRODUCT_PACKAGES += \
+    libcrypto-v33 \
+    libshim_crypto:64 \
+    libssl-v33
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.samsung

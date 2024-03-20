@@ -138,9 +138,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl
 
 PRODUCT_PACKAGES += \
-    libcrypto-v33 \
+    libcrypto-tm \
     libshim_crypto:64 \
-    libssl-v33
+    libssl-tm
 
 # Lights
 PRODUCT_PACKAGES += \

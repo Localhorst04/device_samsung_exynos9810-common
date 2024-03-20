@@ -15,10 +15,22 @@
 //
 
 cc_prebuilt_library_shared {
-    name: "libcrypto-v33",
+    name: "libcrypto-tm",
     target: {
         android_arm64: {
-            srcs: ["libcrypto-v33.so"],
+            srcs: ["libcrypto-tm.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libssl-tm",
+    target: {
+        android_arm64: {
+            srcs: ["libssl-tm.so"],
         },
     },
     compile_multilib: "64",

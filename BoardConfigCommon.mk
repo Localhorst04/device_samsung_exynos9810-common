@@ -74,6 +74,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos9810
 # Manifest
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/framework_compatibility_matrix.xml
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 4096

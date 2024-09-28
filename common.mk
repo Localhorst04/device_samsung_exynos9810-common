@@ -7,6 +7,8 @@ COMMON_PATH := device/samsung/exynos9810-common
 $(call inherit-product, vendor/samsung/exynos9810-common/exynos9810-common-vendor.mk)
 
 # Soong namespaces
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/google/interfaces \
@@ -22,11 +24,12 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
-    android.hardware.audio@7.1-impl:32 \
+    android.hardware.audio@7.0-impl:32 \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     android.hidl.allocator@1.0.vendor:32 \
     audio.bluetooth.default \
+    audio.primary.exynos9810 \
     audio.r_submix.default \
     audio.usb.default \
     libaudioroute \
@@ -54,7 +57,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service
+    android.hardware.camera.provider@2.5-service \
+    libprocessgroup.vendor
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -64,12 +68,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Display
+# Graphics
 PRODUCT_PACKAGES += \
+    android.hardware.composer.hwc3-service.slsi \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.4-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    gralloc.exynos9810 \
+    libion
+
+# GPS
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor
+
+# RIL
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.radio@2.2.vendor
 
 PRODUCT_PACKAGES += \
     libdrm.vendor:64

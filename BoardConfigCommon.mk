@@ -126,36 +126,3 @@ WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/dhd/parameters/firmware_path"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
-
-# ELF
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
-## Platform
-BOARD_VENDOR := samsung
-TARGET_SOC := exynos9810
-include hardware/samsung_slsi-linaro/config/BoardConfig9810.mk
-
-# Gralloc
-BOARD_USES_EXYNOS5_COMMON_GRALLOC := true
-BOARD_USES_EXYNOS_GRALLOC_VERSION := 3
-
-# Kernel headers
-TARGET_BOARD_KERNEL_HEADERS := hardware/samsung_slsi-linaro/exynos/kernel-4.9-headers/kernel-headers
-
-# HWComposer
-BOARD_HWC_VERSION := hwc3
-TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := false
-TARGET_USES_HWC2 := true
-HWC_SKIP_VALIDATE := true
-TARGET_HAS_WIDE_COLOR_DISPLAY := true
-BOARD_USES_HWC_SERVICES := false
-VSYNC_EVENT_PHASE_OFFSET_NS := 0
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 0
-
-# Soong Configs
-ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),3)
-$(call soong_config_set,exynosgraphicbuffer,gralloc_version,three)
-endif
-ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),4)
-$(call soong_config_set,exynosgraphicbuffer,gralloc_version,four)
-endif

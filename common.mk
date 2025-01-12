@@ -54,8 +54,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service
-
+    android.hardware.camera.provider-service.samsung \
+    libprocessgroup.vendor 
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor

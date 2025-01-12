@@ -8,6 +8,10 @@
             <name>IEffectsFactory</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IFactory</name>
+            <instance>default</instance>
+        </interface>
     </hal>
         <hal format="hidl" optional="true">
         <name>android.hardware.audio</name>
@@ -33,14 +37,6 @@
         <interface>
             <name>IBiometricsFingerprint</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.camera.provider</name>
-        <version>2.5</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>legacy/0</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -203,48 +199,11 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.gnss</name>
-        <version>2.0</version>
+        <name>android.hardware.nfc</name>
+        <version>1.2</version>
         <interface>
-            <name>ISehGnss</name>
+            <name>INfc</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.health</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISehHealth</name>
-            <instance>sehhealth</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.radio.bridge</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISehBridge</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.radio.channel</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISehChannel</name>
-            <instance>epdgd</instance>
-            <instance>epdgd2</instance>
-            <instance>imsd</instance>
-            <instance>imsd2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.radio</name>
-        <version>2.1</version>
-        <interface>
-            <name>ISehRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -252,14 +211,6 @@
         <version>1.0</version>
         <interface>
             <name>ISehWidevineKeyProvisioning</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.nfc</name>
-        <version>1.2</version>
-        <interface>
-            <name>INfc</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -295,8 +246,16 @@
             <instance>clearkey</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.health</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehHealth</name>
+            <instance>sehhealth</instance>
+        </interface>
+    </hal>
     <hal format="aidl" optional="true">
-        <name>android.hardware.health</name>
+        <name>vendor.samsung.hardware.health</name>
         <version>1</version>
         <interface>
             <name>IHealth</name>
@@ -365,6 +324,14 @@
         <interface>
             <name>ISupplicant</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.camera.provider</name>
+        <version>1</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>internal/0</instance>
         </interface>
     </hal>
 </compatibility-matrix>

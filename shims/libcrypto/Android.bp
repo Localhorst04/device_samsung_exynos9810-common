@@ -1,6 +1,0 @@
-cc_library_shared {
-    name: "libshim_crypto",
-    srcs: ["crypto.c"],
-    shared_libs: ["libcrypto"],
-    vendor: true,
-}

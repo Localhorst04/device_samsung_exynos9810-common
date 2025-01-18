@@ -274,6 +274,10 @@ PRODUCT_PACKAGES += \
     libshim_sensorndkbridge \
     libshim_ui
 
+# OMX
+PRODUCT_PACKAGES += \
+    libstagefright_softomx_plugin.vendor
+
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 

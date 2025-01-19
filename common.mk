@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service
+    android.hardware.camera.provider-service.samsung
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -89,7 +89,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung
+    android.hardware.biometrics.fingerprint-service.samsung
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -155,8 +155,7 @@ PRODUCT_COPY_FILES += \
 
 # Memtrack
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl:64 \
-    android.hardware.memtrack@1.0-service 
+    android.hardware.memtrack-service.samsung-mali
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -256,8 +255,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.schedulerservice@1.0.vendor:64 \
-    android.hardware.sensors@1.0-impl.samsung:64 \
-    android.hardware.sensors@1.0-service \
+    android.hardware.sensors-service.samsung-multihal \
     libsensorndkbridge
 
 # Shims
@@ -293,7 +291,7 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     hostapd \
     WifiOverlay \
     wpa_supplicant \

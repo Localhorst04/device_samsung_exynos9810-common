@@ -1,4 +1,4 @@
-<manifest version="1.0" type="device" target-level="3">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -106,12 +106,12 @@
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>4.0</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IKeymasterDevice/default</fqname>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -185,16 +185,6 @@
         <fqname>@2.0::ISehGnss/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehHealth</name>
-            <instance>sehhealth</instance>
-        </interface>
-        <fqname>@1.0::ISehHealth/sehhealth</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.radio</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -235,14 +225,13 @@
         <fqname>@2.0::ISehChannel/imsd2</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.security.widevine.keyprovisioning</name>
+        <name>vendor.samsung.hardware.security.widevine.keyprov</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ISehWidevineKeyProvisioning</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ISehWidevineKeyProvisioning/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.touch</name>

@@ -35,8 +35,8 @@ PRODUCT_PACKAGES += \
     libprocessgroup.vendor \
     libstagefright_softomx_plugin.vendor
 
-PRODUCT_PACKAGES += \
-    SamsungDAP
+# PRODUCT_PACKAGES += \
+#     SamsungDAP
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
@@ -84,10 +84,6 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -145,10 +141,6 @@ PRODUCT_PACKAGES += \
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
-
-# Livedisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -281,10 +273,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
 
 # USB
 PRODUCT_PACKAGES += \

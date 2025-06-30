@@ -1,0 +1,50 @@
+cc_prebuilt_library_shared {
+    name: "libion-tm",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["v34/arm/libion-tm.so"],
+        },
+        android_arm64: {
+            srcs: ["v34/arm64/libion-tm.so"],
+        },
+    },
+    compile_multilib: "both",
+}
+
+cc_prebuilt_library_shared {
+    name: "libutils-tm",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["v32/arm/libutils-tm.so"],
+        },
+        android_arm64: {
+            srcs: ["v32/arm64/libutils-tm.so"],
+        },
+    },
+    compile_multilib: "both",
+}
+
+cc_prebuilt_library_shared {
+    name: "libcrypto-tm",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["v33/arm/libcrypto-tm.so"],
+        },
+        android_arm64: {
+            srcs: ["v33/arm64/libcrypto-tm.so"],
+        },
+    },
+    compile_multilib: "both",
+}

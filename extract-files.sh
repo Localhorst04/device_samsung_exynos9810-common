@@ -67,11 +67,11 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
                 ;;
         vendor/lib*/hw/hwcomposer.exynos9810.so)
-                "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
-                "${PATCHELF}" --replace-needed libion.so libion-v34.so "${2}"
+                "${PATCHELF}" --replace-needed libutils.so libutils-tm.so "${2}"
+                "${PATCHELF}" --replace-needed libion.so libion-tm.so "${2}"
                 ;;
         vendor/lib*/libexynosdisplay.so|vendor/lib*/sensors.*.so)
-                "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
+                "${PATCHELF}" --replace-needed libutils.so libutils-tm.so "${2}"
                 ;;
         vendor/lib64/libsec-ril.so)
                 xxd -p -c0 "${2}" | sed "s/800e40f9820c8052e10316aae30315aa/800e40f9820c8052e10316aa030080d2/g" | xxd -r -p > "${2}".patched
